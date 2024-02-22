@@ -1,4 +1,4 @@
-import express from "express";
+import express from 'express';
 import morgan from morgan;
 import bodyparser from 'body-parser'
 
@@ -17,4 +17,4 @@ app.use(bodyparser.urlencoded({exports:false}))
 
 
 
-module.export=app;
+module.exports = app;
