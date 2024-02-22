@@ -2,11 +2,11 @@
   "name": "project-3",
   "version": "1.0.0",
   "description": "node",
-  "main": "src/server.js",
+  "main": "src/sever.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "restart": "nodemon src/server.js"
+    "restart": "nodemon src/sever.js"
   },
   "author": "",
   "license": "ISC",
