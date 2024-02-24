@@ -3,14 +3,13 @@ const morgan = require('morgan');
 const bodypaser=require('body-parser')
 
 
-//const app = express=();
 
-app.use(morgan ('dev'));
-
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({exports:false}))
+const app = express();
 
 
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}))
 
 
 
