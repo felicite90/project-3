@@ -1,12 +1,22 @@
 const express = require('express');
 const morgan = require('morgan');
-const bodypaser=require('body-parser')
+const bodyParser=require('body-parser')
 
 
 
 const app = express();
 
+const fournisseurRouter = require('./routes/fournisseur.route');
+const produitRouter = require('./routes/produit.route');
+const clientRouter = require('./routes/client.route');
+const commandeRouter = require('./routes/commande.route')
+const achatRouter = require('./routes/achat.route')
 
+
+
+
+
+app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
@@ -14,6 +24,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 
 
+app.use('/api/fournisseur', fournisseurRouter);
+app.use('/api/produit', produitRouter);
+app.use('/api/client', clientRouter);
+app.use('/api/commande', commandeRouter);
 
 
 module.exports = app;
