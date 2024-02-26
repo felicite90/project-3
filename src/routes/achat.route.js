@@ -1,7 +1,7 @@
 const express = require('express');
 
 
-import*as AchatCtl from "../controllers/achat.controller";
+import *as FournisseurCtrl  from '../controllers/fournisseur.controller'
 
 
 achatRouter.post('/add-achat',AchatCtl.addachat);

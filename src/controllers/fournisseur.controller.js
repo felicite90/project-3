@@ -1,5 +1,6 @@
 const express = require('express');
-import Produit from "../models/produit.model";
+
+import Fournisseur from "../models/fournisseur.model";
 
 export const addProduct = async () => {
     const data = req.body;

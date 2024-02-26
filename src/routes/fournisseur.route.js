@@ -1,6 +1,6 @@
 const express=require('express');
 
-import *as FournisseurCtrl  from '../controllers/fournisseur.controller'
+import *as FournisseurCtrl  from "../controllers/fournisseur.controller"
 
 
 const fournisseurRouter = express.Router();
