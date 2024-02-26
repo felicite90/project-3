@@ -1,4 +1,4 @@
-import express from 'express';
+const express=require('express');
 
 import *as FournisseurCtrl  from '../controllers/fournisseur.controller'
 
@@ -9,11 +9,9 @@ fournisseurRouter.post('/login', FournisseurCtrl.login);
 fournisseurRouter.post('/add-fournisseur', FournisseurCtrl.addFournisseur);
 
 
-import *as FournisseurCtl from "../controllers/fournisseur.controller" ;
 
 
 
-fourniseurRouter.post('/add-fournisseur', FournisseurCtl.addfournisseur);
 
 module.exports = fournisseurRouter;
 
