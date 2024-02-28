@@ -1,7 +1,16 @@
-const express = require('express');
+const express=require('express');
+
+import *as addAchatCtrl  from '../controllers/fournisseur.controller';
 
 
-import *as FournisseurCtrl  from '../controllers/fournisseur.controller'
+const achatRouter = express.Router();
 
 
-achatRouter.post('/add-achat',AchatCtl.addachat);
+achatRouterRouter.post('/add-achat', AchatCtrl.addAchat);
+
+
+
+
+
+
+module.exports = achatRouterRouter;

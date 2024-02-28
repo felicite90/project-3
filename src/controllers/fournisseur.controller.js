@@ -2,21 +2,28 @@ const express = require('express');
 
 import Fournisseur from "../models/fournisseur.model";
 
-export const addProduct = async () => {
+
+
+export const addFournisseur = async (req, res) => {
+    
     const data = req.body;
-    const isDescription = req.query.isDescription;
+
     try {
-        data.fournisseur = userData.userId;
-        const newProduit = new Produit(data);
-        await newProduit.save();
-        res.status(202).json({
-            message: 'Le produit a ete enregistre!',
-            userData,
-            newProduit
-        })
+        const fournisseur = await Fournisseur.findOne({email: data.email});
+        if (fournisseur) {
+            res.status(301).json({
+                message: 'Le founisseur existe déjà'
+            })
+        }else{
+            const newFournisseur = new Fournisseur(data);
+            await newFournisseur.save();
+            res.status(201).json({
+                message: 'Le fournisseur a été bien enregistré'
+            })
+        }
     } catch (error) {
         res.status(500).json({
-            message: 'Error: '+error
+            message: 'Erreur : '+error
         })
     }
 }
